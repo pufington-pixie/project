@@ -1,0 +1,26 @@
+services:
+  # Backend Service
+  - name: e-health-backend
+    type: web
+    env: node
+    region: us-central
+    rootDir: backend  # Set the working directory to 'backend'
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /api/health
+
+  # Frontend Service
+  - name: e-health-frontend
+    type: web
+    env: static  # Use 'static' for a frontend build
+    region: us-central
+    rootDir: frontend  # Set the working directory to 'frontend'
+    buildCommand: npm install && npm run build
+    staticPublishPath: build  # Adjusted since 'rootDir' is set to 'frontend'
+    autoDeploy: true
+    plan: free
