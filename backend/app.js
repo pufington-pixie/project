@@ -4,7 +4,7 @@ var path = require('path');
 //Logger that was used for debugging, commented later
 // var logger = require('morgan');
 var mysql = require('mysql');
-app.use(cors());
+
 
 
 
@@ -29,6 +29,7 @@ var password_in_use = "";
 var who = "";
 
 var app = express();
+app.use(cors());
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
