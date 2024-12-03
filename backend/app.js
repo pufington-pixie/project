@@ -11,7 +11,7 @@ var mysql = require('mysql');
 
 
 const con = mysql.createConnection({
-  host: 'mysql.railway.internal', // Hostname from the connection string
+  host: 'autorack.proxy.rlwy.net', // Hostname from the connection string
   user: 'root',                   // Username from the connection string
   password: 'ganesh',             // Password from the connection string
   database: 'hms',                // Database name from the connection string
