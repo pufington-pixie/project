@@ -4,16 +4,19 @@ var path = require('path');
 //Logger that was used for debugging, commented later
 // var logger = require('morgan');
 var mysql = require('mysql');
-var cors = require('cors');
-var port = 3001
+const url = require('url');
+
+const dbUrl = process.env.MYSQL_URL || 'mysql://root:ganesh@autorack.proxy.rlwy.net:53306/hms'; // Use environment variable or fallback
+const dbConfig = new url.URL(dbUrl);
 
 //Connection Info
 var con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'ganesh',
-  database: 'HMS',
-  multipleStatements: true
+  host: dbConfig.hostname,          // Host: autorack.proxy.rlwy.net
+  user: dbConfig.username,          // User: root
+  password: dbConfig.password,      // Password: ganesh
+  database: dbConfig.pathname.slice(1), // Database: hms (remove the leading /)
+  port: dbConfig.port,              // Port: 53306
+  multipleStatements: true, 
 });
 
 //Connecting To Database
