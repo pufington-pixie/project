@@ -33,7 +33,7 @@ var app = express();
 const cors = require('cors');
 
 app.use(cors({
-  origin: 'https://project-1-jae5.onrender.com/',
+  origin: 'https://project-tjlu.onrender.com',
   credentials: true, // If using cookies or sessions
 }));
 
