@@ -5,7 +5,7 @@ const cors = require('cors');
 
 //Logger that was used for debugging, commented later
 // var logger = require('morgan');
-var mysql = require('mysql');
+var mysql = require('mysql2');
 
 
 
@@ -13,9 +13,9 @@ var mysql = require('mysql');
 const con = mysql.createConnection({
   host: 'autorack.proxy.rlwy.net', // Hostname from the connection string
   user: 'root',                   // Username from the connection string
-  password: 'ganesh',             // Password from the connection string
-  database: 'hms',                // Database name from the connection string
-  port: 3306,                    // Port from the connection string
+  password: 'WmdfbVmBNZEaXTYyPCLxgtMmtlpmQMJn',             // Password from the connection string
+  database: 'HMS',                // Database name from the connection string
+  port: 48025,                    // Port from the connection string
   multipleStatements: true,       // Allow multiple statements
 });
 
