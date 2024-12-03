@@ -1,6 +1,8 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const cors = require('cors');
+
 //Logger that was used for debugging, commented later
 // var logger = require('morgan');
 var mysql = require('mysql');
