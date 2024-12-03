@@ -11,11 +11,11 @@ var mysql = require('mysql');
 
 
 const con = mysql.createConnection({
-  host: 'autorack.proxy.rlwy.net', // Hostname from the connection string
+  host: 'mysql.railway.internal', // Hostname from the connection string
   user: 'root',                   // Username from the connection string
   password: 'ganesh',             // Password from the connection string
   database: 'hms',                // Database name from the connection string
-  port: 53306,                    // Port from the connection string
+  port: 3306,                    // Port from the connection string
   multipleStatements: true,       // Allow multiple statements
 });
 
