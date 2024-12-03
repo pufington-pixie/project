@@ -28,7 +28,7 @@ export class DocViewAppt extends Component {
     }
 
     getNames() {
-        fetch('http://localhost:3001/doctorViewAppt')
+        fetch('https://project-tjlu.onrender.com/doctorViewAppt')
         .then(res => res.json())
         .then(res => this.setState({ apptlist: res.data }));
     }
@@ -84,7 +84,7 @@ export class DocViewAppt extends Component {
                                         {appt.status === "NotDone"?
                                             <Button label="Cancel"
                                             onClick = {() => {
-                                                fetch('http://localhost:3001/deleteAppt?uid='+ appt.id)
+                                                fetch('https://project-tjlu.onrender.com/deleteAppt?uid='+ appt.id)
                                                 window.location.reload();
                                             }}
                                             ></Button>

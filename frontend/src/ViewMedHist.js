@@ -36,7 +36,7 @@ export class ViewMedHist extends Component {
         if (value !== undefined)
             patName = value;
         console.log(patName);
-        fetch('http://localhost:3001/MedHistView?name='+ patName + '&variable=words')
+        fetch('https://project-tjlu.onrender.com/MedHistView?name='+ patName + '&variable=words')
         .then(res => res.json())
         .then(res => this.setState({ medhiststate: res.data }));
     }

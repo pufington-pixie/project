@@ -51,7 +51,7 @@ const SidebarButtons = () => {
                                     window.location = "/ApptList"
                                 }
                                 else if (label === "Sign Out") {
-                                    fetch("http://localhost:3001/endSession");
+                                    fetch("https://project-tjlu.onrender.com/endSession");
                                     window.location = "/"
                                 }
                                 else if (label === "Settings") {

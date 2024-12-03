@@ -49,7 +49,7 @@ export class Settings extends Component {
                     onSubmit={({ value }) => {
                         let email_in_use = "";
                         console.log(value);
-                        fetch("http://localhost:3001/userInSession")
+                        fetch("https://project-tjlu.onrender.com/userInSession")
                           .then(res => res.json())
                           .then(res => {
                             var string_json = JSON.stringify(res);
@@ -57,7 +57,7 @@ export class Settings extends Component {
                             email_in_use = email_json.email;
                             console.log(email_in_use);
                             console.log("eg");
-                          fetch("http://localhost:3001/resetPasswordPatient?email=" + 
+                          fetch("https://project-tjlu.onrender.com/resetPasswordPatient?email=" + 
                           email_in_use + "&oldPassword=" + value.oldPassword + "&newPassword=" + 
                           value.newPassword, {method: 'POST'})
                           .then(res => res.json())

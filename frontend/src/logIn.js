@@ -72,7 +72,7 @@ class LogIn extends Component {
               onSubmit={({ value }) => {
                 console.log("Submit", value);
                 if (value.isDoc === true) {
-                  fetch("http://localhost:3001/checkDoclogin?email=" + value.email +
+                  fetch("https://project-tjlu.onrender.com/checkDoclogin?email=" + value.email +
                     "&password=" + value.password)
                     .then(res => res.json())
                     .then(res => {
@@ -84,7 +84,7 @@ class LogIn extends Component {
                       }
                     });
                 } else {
-                  fetch("http://localhost:3001/checklogin?email=" + value.email +
+                  fetch("https://project-tjlu.onrender.com/checklogin?email=" + value.email +
                     "&password=" + value.password)
                     .then(res => res.json())
                     .then(res => {

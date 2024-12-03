@@ -34,14 +34,14 @@ export class ViewOneHistory extends Component {
 
     getHistory(value) {
         let email = "'" + value + "'";
-        fetch('http://localhost:3001/OneHistory?patientEmail='+ email)
+        fetch('https://project-tjlu.onrender.com/OneHistory?patientEmail='+ email)
         .then(res => res.json())
             .then(res => this.setState({ medhiststate: res.data }));
     }
 
     allDiagnoses(value) {
         let email = "'" + value + "'";
-        fetch('http://localhost:3001/allDiagnoses?patientEmail='+ email)
+        fetch('https://project-tjlu.onrender.com/allDiagnoses?patientEmail='+ email)
         .then(res => res.json())
         .then(res => this.setState({ medhiststate2: res.data }));
     }

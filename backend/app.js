@@ -31,7 +31,13 @@ var password_in_use = "";
 var who = "";
 
 var app = express();
-app.use(cors());
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://project-1-jae5.onrender.com/',
+  credentials: true, // If using cookies or sessions
+}));
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
